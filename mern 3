@@ -1,0 +1,291 @@
+# (a) Create a React application using Vite/CRA and display "Welcome to MERN Stack Development"
+
+### App.jsx
+
+```jsx
+function App() {
+  return (
+    <div>
+      <h1>Welcome to MERN Stack Development</h1>
+    </div>
+  );
+}
+
+export default App;
+```
+
+---
+
+# (b) Display dynamic data using JSX
+
+## B1 Code
+
+```jsx
+function App() {
+  const name = "Vijaylaxmi Vishwakarma";
+
+  return (
+    <div>
+      <h2>Hello, {name}</h2>
+    </div>
+  );
+}
+
+export default App;
+```
+
+## B2 Code
+
+```jsx
+function App() {
+  const student = {
+    name: "Vijaylaxmi",
+    age: 20,
+    course: "B.Sc IT"
+  };
+
+  return (
+    <div>
+      <h2>Student Details</h2>
+      <p>Name: {student.name}</p>
+      <p>Age: {student.age}</p>
+      <p>Course: {student.course}</p>
+    </div>
+  );
+}
+
+export default App;
+```
+
+---
+
+# (c) Declare variables and write a function to calculate the sum of two numbers
+
+```jsx
+function App() {
+  const num1 = 20;
+  const num2 = 30;
+
+  function add(a, b) {
+    return a + b;
+  }
+
+  return (
+    <div>
+      <h2>Sum of Two Numbers</h2>
+      <p>{num1} + {num2} = {add(num1, num2)}</p>
+    </div>
+  );
+}
+
+export default App;
+```
+
+---
+
+# (d) Apply basic CSS styling to a React component
+
+## App.jsx
+
+```jsx
+import "./App.css";
+
+function App() {
+  return (
+    <div className="container">
+      <h1>Student Dashboard</h1>
+      <hr />
+      <p>Name : Rahul Sharma</p>
+      <p>Roll Number : 101</p>
+      <p>Course : MCA</p>
+      <p>Semester : III</p>
+      <button>View Result</button>
+    </div>
+  );
+}
+
+export default App;
+```
+
+## App.css
+
+```css
+.container {
+  width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  text-align: center;
+  color: darkblue;
+}
+
+h1 {
+  color: darkblue;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+p {
+  font-size: 18px;
+  color: black;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #0000aa;
+}
+```
+
+---
+
+# (e) Create a simple functional component and render it in App.jsx
+
+## Student.jsx
+
+```jsx
+function Student() {
+  return (
+    <div>
+      <h2>Student Information</h2>
+      <p>Name: Vijaylaxmi Vishwakarma</p>
+      <p>Course: B.Sc IT</p>
+    </div>
+  );
+}
+
+export default Student;
+```
+
+## App.jsx
+
+```jsx
+import Student from "./Student";
+
+function App() {
+  return (
+    <div>
+      <Student />
+    </div>
+  );
+}
+
+export default App;
+```
+
+---
+
+# (f) Create a React component that displays the current date and time dynamically
+
+```jsx
+function App() {
+  const today = new Date();
+
+  return (
+    <div>
+      <h2>Current Date and Time</h2>
+      <p>{today.toLocaleDateString()}</p>
+      <p>{today.toLocaleTimeString()}</p>
+    </div>
+  );
+}
+
+export default App;
+```
+
+---
+
+# Mini Project – MVLU College Management System
+
+## App.jsx
+
+```jsx
+import Header from "./Header";
+import Student from "./Student";
+import Attendance from "./Attendance";
+import Footer from "./Footer";
+
+function App() {
+  return (
+    <div>
+      <Header />
+      <Student />
+      <Attendance />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Header.jsx
+
+```jsx
+function Header() {
+  return <h1>MVLU College Management System</h1>;
+}
+
+export default Header;
+```
+
+## Student.jsx
+
+```jsx
+function Student() {
+  return (
+    <div>
+      <h2>Student Details</h2>
+      <p>Name: Vijaylaxmi Vishwakarma</p>
+      <p>Roll No: T049</p>
+      <p>Class: TYIT</p>
+    </div>
+  );
+}
+
+export default Student;
+```
+
+## Attendance.jsx
+
+```jsx
+function Attendance() {
+  return (
+    <div>
+      <h2>Attendance</h2>
+      <p>Present: 92%</p>
+    </div>
+  );
+}
+
+export default Attendance;
+```
+
+## Footer.jsx
+
+```jsx
+function Footer() {
+  return (
+    <footer>
+      <p>© 2026 MVLU College</p>
+    </footer>
+  );
+}
+
+export default Footer;
+```
